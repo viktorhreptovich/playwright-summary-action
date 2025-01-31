@@ -1,0 +1,1568 @@
+{
+  "config": {
+    "configFile": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\playwright.config.ts",
+    "rootDir": "D:/WORK/ITCLASS/LEARN/TESTING/fullstack-testing-app/tests/playwright/tests/specs",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 10
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "./reports/json/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always",
+          "outputFolder": "./reports/html-report"
+        }
+      ],
+      [
+        "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\node_modules\\monocart-reporter\\lib\\index.js",
+        {
+          "name": "My Test Report",
+          "outputFile": "./reports/monocart-report/index.html"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/WORK/ITCLASS/LEARN/TESTING/fullstack-testing-app/tests/playwright/reports/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/WORK/ITCLASS/LEARN/TESTING/fullstack-testing-app/tests/playwright/tests/specs",
+        "testIgnore": [],
+        "testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.50.0",
+    "workers": 10,
+    "webServer": {
+      "cwd": "../../frontend",
+      "command": "npm run dev -- --port 5138",
+      "port": 5138,
+      "reuseExistingServer": true,
+      "timeout": 10000,
+      "stdout": "pipe"
+    }
+  },
+  "suites": [
+    {
+      "title": "auth\\sginup\\signup.form.validation.spec.ts",
+      "file": "auth/sginup/signup.form.validation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Auth",
+          "file": "auth/sginup/signup.form.validation.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "\"Sign up\" form validation (json file)",
+              "file": "auth/sginup/signup.form.validation.spec.ts",
+              "line": 7,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "Should fail when form is empty",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "failed",
+                          "duration": 5979,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\n    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32",
+                            "matcherResult": {
+                              "message": "\u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "disabled",
+                              "name": "toBeEnabled",
+                              "expected": "enabled",
+                              "log": [
+                                "  - expect.toBeEnabled with timeout 2000ms",
+                                "  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')",
+                                "    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>",
+                                "      - unexpected value \"disabled\""
+                              ],
+                              "timeout": 2000
+                            },
+                            "location": {
+                              "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                              "column": 39,
+                              "line": 190
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                                "column": 39,
+                                "line": 190
+                              },
+                              "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\u001b[22m\n\u001b[2m    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\u001b[22m\n\u001b[2m    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3005
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"\", \"\", \"\"",
+                              "duration": 487,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"\"",
+                                  "duration": 160
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"\"",
+                                  "duration": 198
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 124
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username is required\"  should be visible",
+                              "duration": 41
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is required\"  should be visible",
+                              "duration": 23
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 19
+                            },
+                            {
+                              "title": "\"Sign up\" button should be enabled",
+                              "duration": 2010,
+                              "error": {
+                                "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                                "stack": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\n    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32",
+                                "matcherResult": {
+                                  "message": "\u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                                  "pass": false,
+                                  "actual": "disabled",
+                                  "name": "toBeEnabled",
+                                  "expected": "enabled",
+                                  "log": [
+                                    "  - expect.toBeEnabled with timeout 2000ms",
+                                    "  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')",
+                                    "    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>",
+                                    "      - unexpected value \"disabled\""
+                                  ],
+                                  "timeout": 2000
+                                },
+                                "location": {
+                                  "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                                  "column": 39,
+                                  "line": 190
+                                },
+                                "snippet": "\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m"
+                              }
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.943Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\reports\\test-results\\auth-sginup-signup.form.va-6d12d-uld-fail-when-form-is-empty-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\reports\\test-results\\auth-sginup-signup.form.va-6d12d-uld-fail-when-form-is-empty-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                            "column": 39,
+                            "line": 190
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-8530225ac9428789d9ba",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username is empty, email and password are invalid",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "failed",
+                          "duration": 5947,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\n    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32",
+                            "matcherResult": {
+                              "message": "\u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "disabled",
+                              "name": "toBeEnabled",
+                              "expected": "enabled",
+                              "log": [
+                                "  - expect.toBeEnabled with timeout 2000ms",
+                                "  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')",
+                                "    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>",
+                                "      - unexpected value \"disabled\""
+                              ],
+                              "timeout": 2000
+                            },
+                            "location": {
+                              "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                              "column": 39,
+                              "line": 190
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                                "column": 39,
+                                "line": 190
+                              },
+                              "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\u001b[22m\n\u001b[2m    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\u001b[22m\n\u001b[2m    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3055
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"\", \"t.v@mailru\", \"12345\"",
+                              "duration": 354,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"\"",
+                                  "duration": 150
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"t.v@mailru\"",
+                                  "duration": 88
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"12345\"",
+                                  "duration": 112
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username is required\"  should be visible",
+                              "duration": 54
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 34
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password must be at least 6 characters long\"  should be visible",
+                              "duration": 33
+                            },
+                            {
+                              "title": "\"Sign up\" button should be enabled",
+                              "duration": 2015,
+                              "error": {
+                                "message": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                                "stack": "Error: \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:190:39\n    at SignUpForm.signUpButtonShouldBeEnabled (D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts:189:16)\n    at D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\specs\\auth\\sginup\\signup.form.validation.spec.ts:36:32",
+                                "matcherResult": {
+                                  "message": "\u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')\u001b[22m\n\u001b[2m    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
+                                  "pass": false,
+                                  "actual": "disabled",
+                                  "name": "toBeEnabled",
+                                  "expected": "enabled",
+                                  "log": [
+                                    "  - expect.toBeEnabled with timeout 2000ms",
+                                    "  - waiting for getByTestId('container').filter({ has: getByTestId('page-signup') }).getByTestId('form-signup').getByTestId('button-signup')",
+                                    "    6 × locator resolved to <button disabled data-testid=\"button-signup\" class=\"btn btn-green mx-auto btn-disabled\">Sign up</button>",
+                                    "      - unexpected value \"disabled\""
+                                  ],
+                                  "timeout": 2000
+                                },
+                                "location": {
+                                  "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                                  "column": 39,
+                                  "line": 190
+                                },
+                                "snippet": "\u001b[90m   at \u001b[39m..\\objects\\forms\\auth\\signup.form.ts:190\n\n\u001b[0m \u001b[90m 188 |\u001b[39m   \u001b[36masync\u001b[39m signUpButtonShouldBeEnabled() {\n \u001b[90m 189 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m`\"Sign up\" button should be enabled`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 190 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 191 |\u001b[39m       \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msignUpButton)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveClass(\u001b[35m/btn-disabled/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 193 |\u001b[39m   }\u001b[0m"
+                              }
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.945Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\reports\\test-results\\auth-sginup-signup.form.va-a22b6-il-and-password-are-invalid-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\reports\\test-results\\auth-sginup-signup.form.va-a22b6-il-and-password-are-invalid-chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\WORK\\ITCLASS\\LEARN\\TESTING\\fullstack-testing-app\\tests\\playwright\\tests\\objects\\forms\\auth\\signup.form.ts",
+                            "column": 39,
+                            "line": 190
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-89e18640f5cda9cc4bd5",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username is empty and email is invalid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 3912,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3061
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"\", \"@mail.ru\", \"testvv\"",
+                              "duration": 353,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"\"",
+                                  "duration": 153
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"@mail.ru\"",
+                                  "duration": 96
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"testvv\"",
+                                  "duration": 99
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username is required\"  should be visible",
+                              "duration": 52
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 29
+                            },
+                            {
+                              "title": "\"Password\" error should not be visible",
+                              "duration": 21
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 32
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.960Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-b77b2b3d7f0d41de8c3c",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username and password are empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "status": "passed",
+                          "duration": 4050,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3044
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"\", \"test.validation@mail.ru\", \"\"",
+                              "duration": 449,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"\"",
+                                  "duration": 165
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"test.validation@mail.ru\"",
+                                  "duration": 157
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 123
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username is required\"  should be visible",
+                              "duration": 60
+                            },
+                            {
+                              "title": "\"Email\" error should not be visible",
+                              "duration": 14
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 23
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 22
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.996Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-e2df35ef69fcb462039c",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username and email are invalid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "status": "passed",
+                          "duration": 3994,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3104
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"T\", \"t.v@mailru\", \"testvv\"",
+                              "duration": 370,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"T\"",
+                                  "duration": 160
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"t.v@mailru\"",
+                                  "duration": 117
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"testvv\"",
+                                  "duration": 90
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username must be at least 2 characters long\"  should be visible",
+                              "duration": 53
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 36
+                            },
+                            {
+                              "title": "\"Password\" error should not be visible",
+                              "duration": 24
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 26
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:36.015Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-1423ed3794511382d69e",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username and email are invalid, password is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "status": "passed",
+                          "duration": 4007,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3104
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"T\", \"@mail.ru\", \"\"",
+                              "duration": 465,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"T\"",
+                                  "duration": 165
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"@mail.ru\"",
+                                  "duration": 184
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 112
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username must be at least 2 characters long\"  should be visible",
+                              "duration": 51
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 27
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 17
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 22
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.947Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-08dca70a8c35c45e2cce",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username is invalid and password is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 3980,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3060
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"T\", \"test.validation@mail.ru\", \"\"",
+                              "duration": 352,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"T\"",
+                                  "duration": 150
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"test.validation@mail.ru\"",
+                                  "duration": 94
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 105
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username must be at least 2 characters long\"  should be visible",
+                              "duration": 56
+                            },
+                            {
+                              "title": "\"Email\" error should not be visible",
+                              "duration": 19
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 39
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 26
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.987Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-46355a39a0b2df99edc4",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when username and password are invalid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "status": "passed",
+                          "duration": 4000,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3085
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"T\", \"\", \"12345\"",
+                              "duration": 483,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"T\"",
+                                  "duration": 172
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"\"",
+                                  "duration": 196
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"12345\"",
+                                  "duration": 109
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error: \"Username must be at least 2 characters long\"  should be visible",
+                              "duration": 43
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is required\"  should be visible",
+                              "duration": 25
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password must be at least 6 characters long\"  should be visible",
+                              "duration": 18
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 19
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:36.000Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-0a484c7001ae2c7825ca",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when email is invalid (without domain) and password is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "status": "passed",
+                          "duration": 4021,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3173
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"TV\", \"@mail.ru\", \"\"",
+                              "duration": 450,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"TV\"",
+                                  "duration": 150
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"@mail.ru\"",
+                                  "duration": 171
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 126
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 38
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 39
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 22
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 21
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:36.006Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-b145c7cde7a4fffebeb1",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when password is invalid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 9,
+                          "status": "passed",
+                          "duration": 3973,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 3042
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"TV\", \"test.validation@mail.ru\", \"12345\"",
+                              "duration": 355,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"TV\"",
+                                  "duration": 158
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"test.validation@mail.ru\"",
+                                  "duration": 83
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"12345\"",
+                                  "duration": 112
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 48
+                            },
+                            {
+                              "title": "\"Email\" error should not be visible",
+                              "duration": 18
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password must be at least 6 characters long\"  should be visible",
+                              "duration": 46
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 29
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:35.955Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-f239f9368056ad64f007",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when email is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 816,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 320
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"TV\", \"\", \"testvv\"",
+                              "duration": 209,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"TV\"",
+                                  "duration": 85
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"\"",
+                                  "duration": 70
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"testvv\"",
+                                  "duration": 51
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 20
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is required\"  should be visible",
+                              "duration": 36
+                            },
+                            {
+                              "title": "\"Password\" error should not be visible",
+                              "duration": 15
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 25
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.157Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-590e327ac63bf57f3f6b",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when password is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 9,
+                          "status": "passed",
+                          "duration": 876,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 384
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"TV\", \"t.v@mailru\", \"\"",
+                              "duration": 221,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"TV\"",
+                                  "duration": 91
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"t.v@mailru\"",
+                                  "duration": 73
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 55
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 22
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 26
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 26
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 22
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.181Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-845c6e0a88e8dbc955c4",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should pass when all fields are valid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 803,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 341
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"Test Validation\", \"test.validation@mail.ru\", \"testvv\"",
+                              "duration": 209,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"Test Validation\"",
+                                  "duration": 95
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"test.validation@mail.ru\"",
+                                  "duration": 46
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"testvv\"",
+                                  "duration": 65
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 24
+                            },
+                            {
+                              "title": "\"Email\" error should not be visible",
+                              "duration": 15
+                            },
+                            {
+                              "title": "\"Password\" error should not be visible",
+                              "duration": 12
+                            },
+                            {
+                              "title": "\"Sign up\" button should be enabled",
+                              "duration": 25
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.184Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-7680afbbc6edc9f97543",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when email and password are empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "status": "passed",
+                          "duration": 812,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 314
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"Test Validation\", \"\", \"\"",
+                              "duration": 213,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"Test Validation\"",
+                                  "duration": 85
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"\"",
+                                  "duration": 67
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 59
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 28
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is required\"  should be visible",
+                              "duration": 34
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 24
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 25
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.192Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-c5442a7d8f7289570bc0",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when email is invalid and password is empty",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "status": "passed",
+                          "duration": 871,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 413
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"Test Validation\", \"t.v@mailru\", \"\"",
+                              "duration": 187,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"Test Validation\"",
+                                  "duration": 82
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"t.v@mailru\"",
+                                  "duration": 56
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"\"",
+                                  "duration": 47
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 13
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 36
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password is required\"  should be visible",
+                              "duration": 22
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 20
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.224Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-153e90facbab1e6ed2f1",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                },
+                {
+                  "title": "Should fail when email and password are invalid",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "status": "passed",
+                          "duration": 874,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Open 'Sign up' page",
+                              "duration": 400
+                            },
+                            {
+                              "title": "Set \"Sign up\" form to \"Test Validation\", \"@mail.ru\", \"12345\"",
+                              "duration": 184,
+                              "steps": [
+                                {
+                                  "title": "Set \"Username\" input to \"Test Validation\"",
+                                  "duration": 85
+                                },
+                                {
+                                  "title": "Set \"Email\" input to \"@mail.ru\"",
+                                  "duration": 54
+                                },
+                                {
+                                  "title": "Set \"Password\" input to \"12345\"",
+                                  "duration": 42
+                                }
+                              ]
+                            },
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 10
+                            },
+                            {
+                              "title": "\"Email\" error: \"Email is not valid\"  should be visible",
+                              "duration": 25
+                            },
+                            {
+                              "title": "\"Password\" error: \"Password must be at least 6 characters long\"  should be visible",
+                              "duration": 35
+                            },
+                            {
+                              "title": "\"Sign up\" button should be disabled",
+                              "duration": 18
+                            }
+                          ],
+                          "startTime": "2025-01-31T06:42:40.259Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "96b4597d8177fd79019e-a8ca2290138faa397215",
+                  "file": "auth/sginup/signup.form.validation.spec.ts",
+                  "line": 19,
+                  "column": 13
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth\\sginup\\signup.spec.ts",
+      "file": "auth/sginup/signup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Auth",
+          "file": "auth/sginup/signup.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should show \"Sign up\" form correctly",
+              "ok": true,
+              "tags": ["auth"],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "description",
+                      "description": "\"Sign up\" form should be correct"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 806,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Open 'Sign up' page",
+                          "duration": 425
+                        },
+                        {
+                          "title": "'Sign up' page should be opened",
+                          "duration": 39
+                        },
+                        {
+                          "title": "\"Sign up\" form should be visible",
+                          "duration": 103,
+                          "steps": [
+                            {
+                              "title": "\"Username\" input should be visible",
+                              "duration": 23
+                            },
+                            {
+                              "title": "\"Email\" input should be visible",
+                              "duration": 13
+                            },
+                            {
+                              "title": "\"Password\" input should be visible",
+                              "duration": 12
+                            },
+                            {
+                              "title": "\"Sign up\" button should be visible",
+                              "duration": 26
+                            },
+                            {
+                              "title": "\"You already have an account?\" button should be visible",
+                              "duration": 24
+                            }
+                          ]
+                        },
+                        {
+                          "title": "\"Sign up\" form errors should not be visible",
+                          "duration": 43,
+                          "steps": [
+                            {
+                              "title": "\"Username\" error should not be visible",
+                              "duration": 19
+                            },
+                            {
+                              "title": "\"Email\" error should not be visible",
+                              "duration": 10
+                            },
+                            {
+                              "title": "\"Password\" error should not be visible",
+                              "duration": 11
+                            }
+                          ]
+                        },
+                        {
+                          "title": "\"Sign up\" button should be disabled",
+                          "duration": 23
+                        }
+                      ],
+                      "startTime": "2025-01-31T06:42:40.266Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fde1f6e53f6595bcd04b-d8946bf40024ba7bbece",
+              "file": "auth/sginup/signup.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "navigation\\navigation.spec.ts",
+      "file": "navigation/navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Navigation",
+          "file": "navigation/navigation.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Should navigate between pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 217,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-31T06:42:40.267Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a6b4fb63239538ce3fcb-6006556a0a877212491b",
+              "file": "navigation/navigation.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-01-31T06:42:34.295Z",
+    "duration": 8162.731999999999,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

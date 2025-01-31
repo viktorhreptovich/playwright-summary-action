@@ -4,15 +4,10 @@ author: Your name or organization here
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  file-path:
+    description: Path to the results file
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+    default: './results.json'
 
 runs:
   using: node20
