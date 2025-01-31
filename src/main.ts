@@ -15,6 +15,13 @@ export async function run(): Promise<void> {
     const { stats } = JSON.parse(data)
     const results = stats as Stats
 
+    core.setOutput('starttime', results.startTime)
+    core.setOutput('duration', results.duration)
+    core.setOutput('passed', results.expected)
+    core.setOutput('failed', results.unexpected)
+    core.setOutput('skipped', results.skipped)
+    core.setOutput('flaky', results.flaky)
+
     await core.summary
       .addHeading('Test Results')
       .addTable([
