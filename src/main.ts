@@ -1,5 +1,6 @@
+import * as fs from 'fs'
 import * as core from '@actions/core'
-import { wait } from './wait.js'
+import { Stats } from './types.js'
 
 /**
  * The main function for the action.
@@ -8,20 +9,27 @@ import { wait } from './wait.js'
  */
 export async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
+    const filePath: string = core.getInput('file-path')
+    core.debug(`Reading file: ${filePath}`)
+    const data = fs.readFileSync(filePath, 'utf-8')
+    const { stats } = JSON.parse(data)
+    const results = stats as Stats
 
-    // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
-    core.debug(`Waiting ${ms} milliseconds ...`)
-
-    // Log the current timestamp, wait, then log the new timestamp
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
-
-    // Set outputs for other workflow steps to use
-    core.setOutput('time', new Date().toTimeString())
+    await core.summary
+      .addHeading('Test Results')
+      .addTable([
+        ['Tests started', results.startTime.toString()],
+        ['Duration', results.duration.toString()]
+      ])
+      .addBreak()
+      .addTable([
+        ['🟢', 'Passed', results.expected.toString()],
+        ['🔴', 'Failed', results.unexpected.toString()],
+        ['⚪', 'Skipped', results.skipped.toString()],
+        ['🟠', 'Flaky', results.flaky.toString()]
+      ])
+      .write()
   } catch (error) {
-    // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
   }
 }
