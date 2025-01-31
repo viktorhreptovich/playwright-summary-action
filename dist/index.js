@@ -27251,6 +27251,12 @@ async function run() {
         const data = require$$1.readFileSync(filePath, 'utf-8');
         const { stats } = JSON.parse(data);
         const results = stats;
+        coreExports.setOutput('starttime', results.startTime);
+        coreExports.setOutput('duration', results.duration);
+        coreExports.setOutput('passed', results.expected);
+        coreExports.setOutput('failed', results.unexpected);
+        coreExports.setOutput('skipped', results.skipped);
+        coreExports.setOutput('flaky', results.flaky);
         await coreExports.summary
             .addHeading('Test Results')
             .addTable([

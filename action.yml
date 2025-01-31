@@ -9,6 +9,20 @@ inputs:
     required: true
     default: './results.json'
 
+outputs:
+  starttime:
+    description: The start time of the run playwright tests
+  duration:
+    description: The duration of the run playwright tests
+  passed:
+    description: The number of passed tests
+  failed:
+    description: The number of failed tests
+  skipped:
+    description: The number of skipped tests
+  flaky:
+    description: The number of flaky tests
+
 runs:
   using: node20
   main: dist/index.js
